@@ -4,37 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baixe o Telegram</title>
+    <link rel="icon" href="assets/image/icon letra.svg" type="image/svg+xml">
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
+            background-color: #f0f2f5;
             color: #333;
         }
-        header {
-            background-color: #0088cc;
-            color: #fff;
-            padding: 15px 0;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            width: 100%;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.2em;
-            font-weight: 600;
-        }
         .container {
-            padding: 20px;
+            padding: 30px;
             max-width: 600px;
             margin: auto;
             background: #fff;
             border-radius: 12px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             text-align: center;
+            margin-top: 20px;
+            position: relative;
+            z-index: 1;
         }
         .logo {
             width: 100px;
@@ -43,7 +32,7 @@
         h2 {
             color: #333;
             font-size: 2em;
-            margin: 10px 0;
+            margin: 15px 0;
             font-weight: 700;
         }
         p {
@@ -62,8 +51,8 @@
             text-decoration: none;
             font-size: 1.1em;
             font-weight: 600;
-            transition: background-color 0.3s, transform 0.3s;
             border: 2px solid transparent;
+            transition: background-color 0.3s;
         }
         .button-android {
             background-color: #202020;
@@ -74,8 +63,7 @@
             border-color: #dc3545;
         }
         .button:hover {
-            opacity: 0.9;
-            transform: scale(1.05);
+            background-color: #333;
         }
         .icon {
             width: 24px;
@@ -99,7 +87,7 @@
             padding: 15px;
             border-bottom: 1px solid #ddd;
             border-radius: 8px;
-            background: #f0f2f5;
+            background: #f9f9f9;
         }
         .step:last-child {
             border-bottom: none;
@@ -122,23 +110,24 @@
             border-radius: 12px;
         }
         footer {
-            background-color: #0088cc;
-            color: #fff;
+            background-color: transparent;
+            color: #333;
             padding: 10px;
             text-align: center;
-            position: relative;
+            position: absolute;
             bottom: 0;
             width: 100%;
-            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1);
             margin-top: 30px;
+        }
+        footer p {
+            margin: 0;
+            color: rgba(0, 0, 0, 0.5); /* Quase invisível */
+            font-size: 0.9em;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Telegram</h1>
-    </header>
-    
     <div class="container">
         <img src="https://icons.getbootstrap.com/assets/icons/telegram.svg" alt="Telegram Logo" class="logo">
         <h2>Baixe o Telegram</h2>
@@ -155,20 +144,16 @@
 
         <div class="step-container">
             <div class="step">
-                <div class="step-title">Passo 1: Baixe o Aplicativo</div>
-                <div class="step-description">Clique no botão correspondente para baixar o Telegram na sua plataforma (Android ou iOS).</div>
+                <div class="step-title">Passo 1: Instale o Aplicativo</div>
+                <div class="step-description">Clique no botão correspondente para baixar e instalar o Telegram na sua plataforma (Android ou iOS).</div>
             </div>
             <div class="step">
-                <div class="step-title">Passo 2: Instale o Aplicativo</div>
-                <div class="step-description">Após o download, abra o arquivo para iniciar a instalação do Telegram no seu dispositivo.</div>
+                <div class="step-title">Passo 2: Abra o Aplicativo</div>
+                <div class="step-description">Após a instalação, abra o Telegram no seu dispositivo.</div>
             </div>
             <div class="step">
-                <div class="step-title">Passo 3: Crie um Nome de Usuário</div>
-                <div class="step-description">Ao abrir o Telegram, siga as instruções para criar um nome de usuário.</div>
-            </div>
-            <div class="step">
-                <div class="step-title">Passo 4: Informe ao Suporte</div>
-                <div class="step-description">Envie seu nome de usuário para o suporte para garantir o acesso completo ao Telegram.</div>
+                <div class="step-title">Passo 3: Cadastrar e Definir Nome de Usuário</div>
+                <div class="step-description">Siga as instruções para criar um nome de usuário e assistir ao vídeo explicativo.</div>
             </div>
         </div>
 
@@ -181,7 +166,7 @@
     </div>
     
     <footer>
-        <p>&copy; 2024 Telegram. Todos os direitos reservados.</p>
+        <p>@euoryan</p>
     </footer>
 </body>
 </html>
