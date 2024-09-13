@@ -14,99 +14,93 @@
             color: #333;
         }
         .container {
-            padding: 30px;
-            max-width: 600px;
-            margin: auto;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 90%;
             background: #fff;
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             text-align: center;
-            margin-top: 20px;
-            position: relative;
-            z-index: 1;
         }
         .logo {
-            width: 100px;
-            margin: 20px 0;
+            width: 80px;
+            margin: 10px 0;
         }
         h2 {
             color: #333;
-            font-size: 2em;
-            margin: 15px 0;
-            font-weight: 700;
+            font-size: 1.8em;
+            margin: 10px 0;
+            font-weight: 600;
         }
         p {
-            font-size: 1.1em;
+            font-size: 1em;
             color: #555;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
+        }
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
         }
         .button {
-            display: inline-flex;
+            display: flex;
             align-items: center;
             justify-content: center;
-            padding: 15px 25px;
-            margin: 10px;
+            width: 100%;
+            max-width: 260px;
+            margin: 0 auto;
+            padding: 12px 20px;
             border-radius: 8px;
             color: #fff;
             text-decoration: none;
-            font-size: 1.1em;
+            font-size: 1em;
             font-weight: 600;
             border: 2px solid transparent;
             transition: background-color 0.3s;
+            text-align: center;
         }
         .button-android {
             background-color: #202020;
-            border-color: #202020;
         }
         .button-ios {
             background-color: #dc3545;
-            border-color: #dc3545;
-        }
-        .button:hover {
-            background-color: #333;
         }
         .icon {
-            width: 24px;
-            margin-right: 10px;
+            width: 20px;
+            margin-right: 8px;
             filter: invert(1);
         }
-        .button-text {
-            display: flex;
-            align-items: center;
+        .button:hover {
+            background-color: #444;
         }
         .step-container {
-            margin-top: 30px;
+            margin-top: 25px;
             font-size: 1em;
             color: #333;
             text-align: left;
-            max-width: 550px;
-            margin: 20px auto;
         }
         .step {
             margin: 15px 0;
-            padding: 15px;
-            border-bottom: 1px solid #ddd;
+            padding: 12px;
             border-radius: 8px;
             background: #f9f9f9;
-        }
-        .step:last-child {
-            border-bottom: none;
+            border-left: 4px solid #0078d4;
         }
         .step-title {
             font-weight: 600;
+            font-size: 1.1em;
             margin-bottom: 8px;
-            font-size: 1.2em;
         }
         .step-description {
             color: #666;
         }
         .video-container {
-            margin-top: 30px;
+            margin-top: 20px;
             text-align: center;
         }
         video {
             width: 100%;
-            max-width: 600px;
             border-radius: 12px;
         }
         footer {
@@ -114,16 +108,27 @@
             color: #333;
             padding: 10px;
             text-align: center;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1);
+            position: relative;
             margin-top: 30px;
         }
         footer p {
             margin: 0;
-            color: rgba(0, 0, 0, 0.5); /* Quase invisível */
+            color: rgba(0, 0, 0, 0.4); /* Quase invisível */
             font-size: 0.9em;
+        }
+
+        /* Ajustes para layout de celular */
+        @media (max-width: 768px) {
+            h2 {
+                font-size: 1.6em;
+            }
+            .button {
+                padding: 10px 15px;
+                font-size: 0.9em;
+            }
+            .step {
+                padding: 10px;
+            }
         }
     </style>
 </head>
@@ -133,27 +138,29 @@
         <h2>Baixe o Telegram</h2>
         <p>Escolha a plataforma para começar a usar o Telegram.</p>
         
-        <a href="https://play.google.com/store/apps/details?id=org.telegram.messenger" class="button button-android" target="_blank">
-            <img src="https://icons.getbootstrap.com/assets/icons/android.svg" alt="Android Icon" class="icon"> 
-            <span class="button-text">Baixar para Android</span>
-        </a>
-        <a href="https://apps.apple.com/br/app/telegram-messenger/id686449807" class="button button-ios" target="_blank">
-            <img src="https://icons.getbootstrap.com/assets/icons/apple.svg" alt="Apple Icon" class="icon"> 
-            <span class="button-text">Baixar para iOS</span>
-        </a>
+        <div class="button-container">
+            <a href="https://play.google.com/store/apps/details?id=org.telegram.messenger" class="button button-android" target="_blank">
+                <img src="https://icons.getbootstrap.com/assets/icons/android.svg" alt="Android Icon" class="icon"> 
+                <span>Baixar para Android</span>
+            </a>
+            <a href="https://apps.apple.com/br/app/telegram-messenger/id686449807" class="button button-ios" target="_blank">
+                <img src="https://icons.getbootstrap.com/assets/icons/apple.svg" alt="Apple Icon" class="icon"> 
+                <span>Baixar para iOS</span>
+            </a>
+        </div>
 
         <div class="step-container">
             <div class="step">
-                <div class="step-title">Passo 1: Instale o Aplicativo</div>
-                <div class="step-description">Clique no botão correspondente para baixar e instalar o Telegram na sua plataforma (Android ou iOS).</div>
+                <div class="step-title">Passo 1: Instalar</div>
+                <div class="step-description">Baixe e instale o Telegram na sua plataforma (Android ou iOS).</div>
             </div>
             <div class="step">
-                <div class="step-title">Passo 2: Abra o Aplicativo</div>
-                <div class="step-description">Após a instalação, abra o Telegram no seu dispositivo.</div>
+                <div class="step-title">Passo 2: Abrir</div>
+                <div class="step-description">Após instalar, abra o aplicativo no seu dispositivo.</div>
             </div>
             <div class="step">
                 <div class="step-title">Passo 3: Cadastrar e Definir Nome de Usuário</div>
-                <div class="step-description">Siga as instruções para criar um nome de usuário e assistir ao vídeo explicativo.</div>
+                <div class="step-description">Siga as instruções para criar um nome de usuário e veja o vídeo explicativo.</div>
             </div>
         </div>
 
