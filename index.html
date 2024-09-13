@@ -12,22 +12,17 @@
             padding: 0;
             background-color: #f0f2f5;
             color: #333;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
         }
 
         /* Container principal */
         .container {
             padding: 20px;
             margin: 20px auto;
-            max-width: 100%;
+            max-width: 90%;
             background: #fff;
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             text-align: center;
-            width: 90%;
         }
 
         .logo {
@@ -55,11 +50,13 @@
             color: #0078d4;
         }
 
+        /* Alinhamento de botões */
         .button-container {
             display: flex;
             flex-direction: column;
             gap: 15px;
             margin-top: 20px;
+            align-items: center; /* Alinha os botões ao centro */
         }
 
         /* Estilo dos botões */
@@ -69,7 +66,6 @@
             justify-content: center;
             width: 100%;
             max-width: 220px;
-            margin: 0 auto;
             padding: 12px 20px;
             border-radius: 8px;
             color: #fff;
@@ -95,7 +91,13 @@
             filter: invert(1);
         }
 
-        /* Botões sem efeito de hover brusco */
+        /* Botão de assistir ao vídeo */
+        .button-video {
+            background-color: #0078d4;
+            margin-top: 20px;
+            max-width: 200px;
+        }
+
         .button:hover {
             background-color: #444;
         }
@@ -126,26 +128,16 @@
             color: #666;
         }
 
+        /* Alinhamento do vídeo */
         .video-container {
             margin-top: 20px;
             text-align: center;
+            display: none; /* O vídeo só aparece após o botão ser clicado */
         }
 
-        /* Estilo do botão "Assistir Vídeo" */
-        .video-button {
-            display: inline-block;
-            padding: 12px 20px;
-            background-color: #0078d4;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-            margin-top: 15px;
-            transition: background-color 0.3s;
-        }
-
-        .video-button:hover {
-            background-color: #005bb5;
+        video {
+            width: 100%;
+            border-radius: 12px;
         }
 
         footer {
@@ -219,9 +211,15 @@
             </div>
         </div>
 
-        <!-- Botão para abrir vídeo em uma nova aba -->
-        <div class="video-container">
-            <a href="assets/video/IMG_5048.MP4" class="video-button" target="_blank">Assistir Vídeo</a>
+        <!-- Botão para assistir ao vídeo -->
+        <a href="#video" class="button button-video" id="watch-video-btn">Assistir ao vídeo</a>
+
+        <!-- Vídeo explicativo -->
+        <div class="video-container" id="video-container">
+            <video controls id="video">
+                <source src="assets/video/IMG_5048.MP4" type="video/mp4">
+                Seu navegador não suporta o elemento de vídeo.
+            </video>
         </div>
     </div>
     
@@ -229,5 +227,14 @@
     <footer>
         <p>@euoryan</p>
     </footer>
+
+    <script>
+        document.getElementById("watch-video-btn").addEventListener("click", function(e) {
+            e.preventDefault();
+            const videoContainer = document.getElementById("video-container");
+            videoContainer.style.display = 'block'; // Mostrar o vídeo
+            document.getElementById("video").scrollIntoView({ behavior: 'smooth' }); // Scroll suave até o vídeo
+        });
+    </script>
 </body>
 </html>
