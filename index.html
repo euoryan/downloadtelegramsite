@@ -14,6 +14,26 @@
             color: #333;
         }
 
+        /* Cabeçalho com efeito arredondado no logo */
+        .header {
+            background-color: #0078d4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 150px;
+            clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            width: 100px;
+            height: auto;
+            border-radius: 50%;
+            background-color: white;
+            padding: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
         /* Container principal */
         .container {
             padding: 20px;
@@ -23,11 +43,6 @@
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             text-align: center;
-        }
-
-        .logo {
-            width: 80px;
-            margin: 10px 0;
         }
 
         h2 {
@@ -95,7 +110,10 @@
         .button-video {
             background-color: #0078d4;
             margin-top: 20px;
-            max-width: 200px;
+            max-width: 150px;
+            padding: 10px 15px;
+            font-size: 0.9em;
+            text-align: center;
         }
 
         .button:hover {
@@ -173,9 +191,13 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Logo e título principal -->
+
+    <!-- Cabeçalho com logo arredondado -->
+    <div class="header">
         <img src="https://icons.getbootstrap.com/assets/icons/telegram.svg" alt="Telegram Logo" class="logo">
+    </div>
+
+    <div class="container">
         <h2>Baixe o Telegram</h2>
 
         <p>Escolha a plataforma para começar a usar o Telegram:</p>
@@ -236,5 +258,6 @@
             document.getElementById("video").scrollIntoView({ behavior: 'smooth' }); // Scroll suave até o vídeo
         });
     </script>
+
 </body>
 </html>
