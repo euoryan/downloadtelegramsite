@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baixe o Telegram</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+        }
+        header {
+            background-color: #202020;
+            color: #ffffff;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+        .container {
+            padding: 80px 20px 20px;
+            max-width: 480px;
+            margin: auto;
+        }
+        .logo {
+            width: 100px;
+            margin: 20px 0;
+        }
+        h2 {
+            color: #333;
+            font-size: 2em;
+            margin: 20px 0;
+        }
+        p {
+            font-size: 1.1em;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        .button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 20px;
+            margin: 10px auto;
+            border-radius: 8px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: bold;
+            max-width: 100%;
+            transition: background-color 0.3s ease;
+            border: 2px solid transparent;
+        }
+        .button-android {
+            background-color: #202020; /* Cor escura para Android */
+            border-color: #202020;
+        }
+        .button-ios {
+            background-color: #dc3545; /* Cor clara para iOS */
+            border-color: #dc3545;
+        }
+        .button:hover {
+            opacity: 0.8;
+        }
+        .icon {
+            width: 24px;
+            margin-right: 10px;
+            filter: invert(1); /* Mudar ícones para branco */
+        }
+        .button-text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .description {
+            margin-top: 30px;
+            font-size: 1.1em;
+            color: #333;
+        }
+        .video-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+        video {
+            width: 100%;
+            max-width: 480px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Baixe o Telegram</h1>
+    </header>
+
+    <div class="container">
+        <img src="https://icons.getbootstrap.com/assets/icons/telegram.svg" alt="Telegram Logo" class="logo">
+        <h2>Instale o Telegram Agora</h2>
+        <p>Escolha a plataforma para começar a usar o Telegram.</p>
+        
+        <a href="https://play.google.com/store/apps/details?id=org.telegram.messenger" class="button button-android" target="_blank">
+            <img src="https://icons.getbootstrap.com/assets/icons/android.svg" alt="Android Icon" class="icon"> 
+            <span class="button-text">Baixar para Android</span>
+        </a>
+        <a href="https://apps.apple.com/br/app/telegram-messenger/id686449807" class="button button-ios" target="_blank">
+            <img src="https://icons.getbootstrap.com/assets/icons/apple.svg" alt="Apple Icon" class="icon"> 
+            <span class="button-text">Baixar para iOS</span>
+        </a>
+
+        <div class="description">
+            <p>Após o cadastro, é importante criar um nome de usuário e enviá-lo para o suporte. Isso garantirá que você tenha acesso total às funcionalidades do Telegram.</p>
+        </div>
+
+        <div class="video-container">
+            <video controls>
+                <source src="assets/video/IMG_5048.MP4" type="video/mp4">
+                Seu navegador não suporta o elemento de vídeo.
+            </video>
+        </div>
+    </div>
+</body>
+</html>
