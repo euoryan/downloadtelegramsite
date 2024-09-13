@@ -6,31 +6,35 @@
     <title>Baixe o Telegram</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f0f2f5;
             color: #333;
-            text-align: center;
         }
         header {
-            background-color: #202020;
-            color: #ffffff;
-            padding: 15px 0;
-            position: fixed;
-            width: 100%;
+            background-color: #0088cc; /* Azul do Telegram */
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
             top: 0;
-            left: 0;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            width: 100%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
         header h1 {
             margin: 0;
-            font-size: 1.5em;
+            font-size: 2.4em;
+            font-weight: 600;
         }
         .container {
-            padding: 80px 20px 20px;
-            max-width: 480px;
+            padding: 30px;
+            max-width: 700px;
             margin: auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
         .logo {
             width: 100px;
@@ -39,74 +43,103 @@
         h2 {
             color: #333;
             font-size: 2em;
-            margin: 20px 0;
+            margin: 15px 0;
+            font-weight: 700;
         }
         p {
             font-size: 1.1em;
-            color: #666;
-            margin-bottom: 30px;
+            color: #555;
+            margin-bottom: 25px;
         }
         .button {
-            display: flex;
+            display: inline-flex;
             align-items: center;
             justify-content: center;
-            padding: 15px 20px;
-            margin: 10px auto;
+            padding: 15px 25px;
+            margin: 10px;
             border-radius: 8px;
             color: #fff;
             text-decoration: none;
             font-size: 1.1em;
-            font-weight: bold;
-            max-width: 100%;
-            transition: background-color 0.3s ease;
+            font-weight: 600;
+            transition: background-color 0.3s, transform 0.3s;
             border: 2px solid transparent;
         }
         .button-android {
-            background-color: #202020; /* Cor escura para Android */
+            background-color: #202020;
             border-color: #202020;
         }
         .button-ios {
-            background-color: #dc3545; /* Cor clara para iOS */
+            background-color: #dc3545;
             border-color: #dc3545;
         }
         .button:hover {
-            opacity: 0.8;
+            opacity: 0.9;
+            transform: scale(1.05);
         }
         .icon {
             width: 24px;
             margin-right: 10px;
-            filter: invert(1); /* Mudar ícones para branco */
+            filter: invert(1);
         }
         .button-text {
             display: flex;
             align-items: center;
-            justify-content: center;
         }
-        .description {
+        .step-container {
             margin-top: 30px;
             font-size: 1.1em;
             color: #333;
+            text-align: left;
+            max-width: 600px;
+            margin: 30px auto;
+        }
+        .step {
+            margin: 20px 0;
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+            border-radius: 8px;
+            background: #f9f9f9;
+        }
+        .step:last-child {
+            border-bottom: none;
+        }
+        .step-title {
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+        .step-description {
+            color: #666;
         }
         .video-container {
-            margin-top: 20px;
+            margin-top: 30px;
             text-align: center;
         }
         video {
             width: 100%;
-            max-width: 480px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            max-width: 700px;
+            border-radius: 12px;
+        }
+        footer {
+            background-color: #0088cc;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            width: 100%;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Baixe o Telegram</h1>
+        <h1>Telegram</h1>
     </header>
-
+    
     <div class="container">
         <img src="https://icons.getbootstrap.com/assets/icons/telegram.svg" alt="Telegram Logo" class="logo">
-        <h2>Instale o Telegram Agora</h2>
+        <h2>Baixe o Telegram</h2>
         <p>Escolha a plataforma para começar a usar o Telegram.</p>
         
         <a href="https://play.google.com/store/apps/details?id=org.telegram.messenger" class="button button-android" target="_blank">
@@ -118,8 +151,23 @@
             <span class="button-text">Baixar para iOS</span>
         </a>
 
-        <div class="description">
-            <p>Após o cadastro, é importante criar um nome de usuário e enviá-lo para o suporte. Isso garantirá que você tenha acesso total às funcionalidades do Telegram.</p>
+        <div class="step-container">
+            <div class="step">
+                <div class="step-title">Passo 1: Baixe o Aplicativo</div>
+                <div class="step-description">Clique no botão correspondente para baixar o Telegram na sua plataforma (Android ou iOS).</div>
+            </div>
+            <div class="step">
+                <div class="step-title">Passo 2: Instale o Aplicativo</div>
+                <div class="step-description">Após o download, abra o arquivo para iniciar a instalação do Telegram no seu dispositivo.</div>
+            </div>
+            <div class="step">
+                <div class="step-title">Passo 3: Crie um Nome de Usuário</div>
+                <div class="step-description">Ao abrir o Telegram, siga as instruções para criar um nome de usuário.</div>
+            </div>
+            <div class="step">
+                <div class="step-title">Passo 4: Informe ao Suporte</div>
+                <div class="step-description">Envie seu nome de usuário para o suporte para garantir o acesso completo ao Telegram.</div>
+            </div>
         </div>
 
         <div class="video-container">
@@ -129,5 +177,9 @@
             </video>
         </div>
     </div>
+    
+    <footer>
+        <p>&copy; 2024 Telegram. Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>
