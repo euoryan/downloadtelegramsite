@@ -12,43 +12,63 @@
             padding: 0;
             background-color: #f0f2f5;
             color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
+
+        /* Container principal */
         .container {
             padding: 20px;
             margin: 20px auto;
-            max-width: 90%;
+            max-width: 100%;
             background: #fff;
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             text-align: center;
+            width: 90%;
         }
+
         .logo {
             width: 80px;
             margin: 10px 0;
         }
+
         h2 {
-            color: #333;
+            color: #0078d4; /* Azul do Telegram */
             font-size: 1.8em;
             margin: 10px 0;
             font-weight: 600;
         }
+
         p {
             font-size: 1em;
             color: #555;
             margin-bottom: 15px;
         }
+
+        .section-title {
+            font-size: 1.4em;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #0078d4;
+        }
+
         .button-container {
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 15px;
             margin-top: 20px;
         }
+
+        /* Estilo dos botões */
         .button {
             display: flex;
             align-items: center;
             justify-content: center;
             width: 100%;
-            max-width: 260px;
+            max-width: 220px;
             margin: 0 auto;
             padding: 12px 20px;
             border-radius: 8px;
@@ -60,26 +80,34 @@
             transition: background-color 0.3s;
             text-align: center;
         }
+
         .button-android {
             background-color: #202020;
         }
+
         .button-ios {
             background-color: #dc3545;
         }
+
         .icon {
             width: 20px;
             margin-right: 8px;
             filter: invert(1);
         }
+
+        /* Botões sem efeito de hover brusco */
         .button:hover {
             background-color: #444;
         }
+
+        /* Passos de instrução */
         .step-container {
             margin-top: 25px;
             font-size: 1em;
             color: #333;
             text-align: left;
         }
+
         .step {
             margin: 15px 0;
             padding: 12px;
@@ -87,22 +115,39 @@
             background: #f9f9f9;
             border-left: 4px solid #0078d4;
         }
+
         .step-title {
             font-weight: 600;
             font-size: 1.1em;
             margin-bottom: 8px;
         }
+
         .step-description {
             color: #666;
         }
+
         .video-container {
             margin-top: 20px;
             text-align: center;
         }
-        video {
-            width: 100%;
-            border-radius: 12px;
+
+        /* Estilo do botão "Assistir Vídeo" */
+        .video-button {
+            display: inline-block;
+            padding: 12px 20px;
+            background-color: #0078d4;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            margin-top: 15px;
+            transition: background-color 0.3s;
         }
+
+        .video-button:hover {
+            background-color: #005bb5;
+        }
+
         footer {
             background-color: transparent;
             color: #333;
@@ -111,6 +156,7 @@
             position: relative;
             margin-top: 30px;
         }
+
         footer p {
             margin: 0;
             color: rgba(0, 0, 0, 0.4); /* Quase invisível */
@@ -122,10 +168,12 @@
             h2 {
                 font-size: 1.6em;
             }
+
             .button {
                 padding: 10px 15px;
                 font-size: 0.9em;
             }
+
             .step {
                 padding: 10px;
             }
@@ -134,21 +182,28 @@
 </head>
 <body>
     <div class="container">
+        <!-- Logo e título principal -->
         <img src="https://icons.getbootstrap.com/assets/icons/telegram.svg" alt="Telegram Logo" class="logo">
         <h2>Baixe o Telegram</h2>
-        <p>Escolha a plataforma para começar a usar o Telegram.</p>
-        
+
+        <p>Escolha a plataforma para começar a usar o Telegram:</p>
+
+        <!-- Botões de download para Android e iOS -->
         <div class="button-container">
             <a href="https://play.google.com/store/apps/details?id=org.telegram.messenger" class="button button-android" target="_blank">
                 <img src="https://icons.getbootstrap.com/assets/icons/android.svg" alt="Android Icon" class="icon"> 
-                <span>Baixar para Android</span>
+                <span>Android</span>
             </a>
             <a href="https://apps.apple.com/br/app/telegram-messenger/id686449807" class="button button-ios" target="_blank">
                 <img src="https://icons.getbootstrap.com/assets/icons/apple.svg" alt="Apple Icon" class="icon"> 
-                <span>Baixar para iOS</span>
+                <span>iOS</span>
             </a>
         </div>
 
+        <!-- Título da seção de instruções -->
+        <p class="section-title">Como começar</p>
+
+        <!-- Passos simplificados com foco no público geral -->
         <div class="step-container">
             <div class="step">
                 <div class="step-title">Passo 1: Instalar</div>
@@ -156,7 +211,7 @@
             </div>
             <div class="step">
                 <div class="step-title">Passo 2: Abrir</div>
-                <div class="step-description">Após instalar, abra o aplicativo no seu dispositivo.</div>
+                <div class="step-description">Abra o aplicativo instalado no seu dispositivo.</div>
             </div>
             <div class="step">
                 <div class="step-title">Passo 3: Cadastrar e Definir Nome de Usuário</div>
@@ -164,14 +219,13 @@
             </div>
         </div>
 
+        <!-- Botão para abrir vídeo em uma nova aba -->
         <div class="video-container">
-            <video controls>
-                <source src="assets/video/IMG_5048.MP4" type="video/mp4">
-                Seu navegador não suporta o elemento de vídeo.
-            </video>
+            <a href="assets/video/IMG_5048.MP4" class="video-button" target="_blank">Assistir Vídeo</a>
         </div>
     </div>
     
+    <!-- Rodapé discreto -->
     <footer>
         <p>@euoryan</p>
     </footer>
