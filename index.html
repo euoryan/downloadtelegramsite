@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guia para Novos Motoristas</title>
+    <title>Guia Novos Motoristas</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
@@ -55,6 +55,14 @@
             color: #0088cc;
         }
 
+        .tips-content {
+            display: none;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
         @media (max-width: 640px) {
             .step-card {
                 border-left: none;
@@ -69,7 +77,7 @@
 <body class="min-h-screen flex flex-col">
     <header class="header-bg py-8 mb-8">
         <div class="container mx-auto px-4">
-            <img src="https://icons.getbootstrap.com/assets/icons/telegram.svg" alt="Telegram Logo" class="w-16 h-16 mx-auto bg-white p-2 rounded-full shadow-lg">
+            <img src="/api/placeholder/64/64" alt="Telegram Logo" class="w-16 h-16 mx-auto bg-white p-2 rounded-full shadow-lg">
         </div>
     </header>
 
@@ -93,6 +101,14 @@
                                 iOS
                             </a>
                         </div>
+                        <p class="text-sm text-gray-500 mt-4 cursor-pointer tips-toggle" data-target="tips-1">Dicas ▼</p>
+                        <div id="tips-1" class="tips-content">
+                            <ul class="list-disc pl-5 text-sm text-gray-600">
+                                <li>Certifique-se de ter uma conexão de internet estável para baixar o aplicativo.</li>
+                                <li>O Telegram é gratuito e não consome muita memória do seu dispositivo.</li>
+                                <li>Se você já tem o Telegram instalado, verifique se está atualizado para a versão mais recente.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -107,6 +123,17 @@
                         <a href="https://t.me/canalrotasbot" class="btn-primary text-white font-medium py-2 px-3 rounded-lg block text-center text-sm sm:text-base" target="_blank">
                             Conversar com o Bot
                         </a>
+                        <p class="text-sm text-gray-500 mt-4 cursor-pointer tips-toggle" data-target="tips-2">Dicas ▼</p>
+                        <div id="tips-2" class="tips-content">
+                            <ul class="list-disc pl-5 text-sm text-gray-600">
+                                <li>Ao iniciar o bot, você receberá uma mensagem de boas-vindas com seu ID de usuário. Guarde esse ID, pois ele é seu meio de comunicação e identificação.</li>
+                                <li>Nosso bot é seguro e só acessa as informações pessoais que você compartilhar.</li>
+                                <li>Se tiver problemas ao iniciar o bot, tente fechar e reabrir o Telegram.</li>
+                                <li>Não envie mensagens aleatórias para o bot. Ele não possui interação direta com a nossa equipe e serve apenas para o envio automatizado de suas rotas planejadas. Não é necessário enviar mensagens por lá.</li>
+                                <li>Todas as mensagens do bot terão um botão de suporte. Ao clicar nele, você será direcionado ao suporte operacional para encaminhar sua dúvida.</li>
+
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -121,6 +148,14 @@
                         <a href="https://t.me/oppmotorista" class="btn-primary text-white font-medium py-2 px-3 rounded-lg block text-center text-sm sm:text-base" target="_blank">
                             Conversar com Operacional
                         </a>
+                        <p class="text-sm text-gray-500 mt-4 cursor-pointer tips-toggle" data-target="tips-3">Dicas ▼</p>
+                        <div id="tips-3" class="tips-content">
+                            <ul class="list-disc pl-5 text-sm text-gray-600">
+                                <li>Ao enviar seu nome de guerra, use o formato: "Nome de Guerra: [Seu Nome]".</li>
+                                <li>Mantenha as conversas profissionais e respeitosas com o suporte operacional.</li>
+                                <li>Guarde o contato do suporte para futuras comunicações importantes.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -130,5 +165,24 @@
     <footer class="mt-10 py-4 text-center text-gray-500 text-sm">
         <p>@euoryan</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggles = document.querySelectorAll('.tips-toggle');
+            toggles.forEach(toggle => {
+                toggle.addEventListener('click', function() {
+                    const targetId = this.getAttribute('data-target');
+                    const targetContent = document.getElementById(targetId);
+                    if (targetContent.style.display === 'none' || targetContent.style.display === '') {
+                        targetContent.style.display = 'block';
+                        this.textContent = 'Dicas ▲';
+                    } else {
+                        targetContent.style.display = 'none';
+                        this.textContent = 'Dicas ▼';
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
