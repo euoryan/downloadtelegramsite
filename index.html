@@ -3,271 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baixe o Telegram</title>
-    <link rel="icon" href="assets/image/icon letra.svg" type="image/svg+xml">
+    <title>Guia para Novos Motoristas</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
+            font-family: 'Inter', sans-serif;
             background-color: #f0f2f5;
-            color: #333;
         }
-
-        /* Cabeçalho com efeito arredondado no logo */
-        .header {
-            background-color: #0078d4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 150px;
-            clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
-            margin-bottom: 20px;
+        
+        .header-bg {
+            background-color: #0088cc;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
         }
-
-        .logo {
-            width: 100px;
-            height: auto;
-            border-radius: 50%;
-            background-color: white;
-            padding: 15px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        
+        .step-card {
+            border-left: 4px solid #0088cc;
         }
-
-        /* Container principal */
-        .container {
-            padding: 20px;
-            margin: 20px auto;
-            max-width: 90%;
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            text-align: center;
+        
+        .btn-primary {
+            background-color: #0088cc;
         }
-
-        h2 {
-            color: #0078d4; /* Azul do Telegram */
-            font-size: 1.8em;
-            margin: 10px 0;
-            font-weight: 600;
-        }
-
-        p {
-            font-size: 1em;
-            color: #555;
-            margin-bottom: 15px;
-        }
-
-        .section-title {
-            font-size: 1.4em;
-            font-weight: 600;
-            margin-bottom: 15px;
-            color: #0078d4;
-        }
-
-        /* Alinhamento de botões */
-        .button-container {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            margin-top: 20px;
-            align-items: center; /* Alinha os botões ao centro */
-        }
-
-        /* Estilo dos botões */
-        .button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            max-width: 220px;
-            padding: 12px 20px;
-            border-radius: 8px;
-            color: #fff;
-            text-decoration: none;
-            font-size: 1em;
-            font-weight: 600;
-            border: 2px solid transparent;
-            transition: background-color 0.3s;
-            text-align: center;
-        }
-
-        .button-android {
-            background-color: #202020;
-        }
-
-        .button-ios {
-            background-color: #dc3545;
-        }
-
-        .icon {
-            width: 20px;
-            margin-right: 8px;
-            filter: invert(1);
-        }
-
-        /* Botão de assistir ao vídeo */
-        .button-video {
-            background-color: #0078d4;
-            color: #fff;
-            padding: 8px 15px;
-            font-size: 0.9em;
-            max-width: 150px;
-            border-radius: 8px;
-            display: inline-block;
-            text-align: center;
-            margin: 20px auto;
-        }
-
-        /* Ajuste do botão "Assistir ao vídeo" */
-        .button-video:hover {
-            opacity: 0.8;
-        }
-
-        /* Passos de instrução */
-        .step-container {
-            margin-top: 25px;
-            font-size: 1em;
-            color: #333;
-            text-align: left;
-        }
-
-        .step {
-            margin: 15px 0;
-            padding: 12px;
-            border-radius: 8px;
-            background: #f9f9f9;
-            border-left: 4px solid #0078d4;
-        }
-
-        .step-title {
-            font-weight: 600;
-            font-size: 1.1em;
-            margin-bottom: 8px;
-        }
-
-        .step-description {
-            color: #666;
-        }
-
-        /* Alinhamento do vídeo */
-        .video-container {
-            margin-top: 20px;
-            text-align: center;
-            display: none; /* O vídeo só aparece após o botão ser clicado */
-        }
-
-        video {
-            width: 100%;
-            border-radius: 12px;
-        }
-
-        footer {
-            background-color: transparent;
-            color: #333;
-            padding: 10px;
-            text-align: center;
-            position: relative;
-            margin-top: 30px;
-        }
-
-        footer p {
-            margin: 0;
-            color: rgba(0, 0, 0, 0.4); /* Quase invisível */
-            font-size: 0.9em;
-        }
-
-        /* Ajustes para layout de celular */
-        @media (max-width: 768px) {
-            h2 {
-                font-size: 1.6em;
-            }
-
-            .button {
-                padding: 10px 15px;
-                font-size: 0.9em;
-            }
-
-            .step {
-                padding: 10px;
-            }
-
-            .button-video {
-                font-size: 0.8em;
-                padding: 6px 12px;
-                max-width: 120px;
-            }
+        
+        .btn-secondary {
+            background-color: #e1e4e8;
+            color: #0088cc;
         }
     </style>
 </head>
-<body>
-
-    <!-- Cabeçalho com logo arredondado -->
-    <div class="header">
-        <img src="https://icons.getbootstrap.com/assets/icons/telegram.svg" alt="Telegram Logo" class="logo">
-    </div>
-
-    <div class="container">
-        <h2>Baixe o Telegram</h2>
-
-        <p>Escolha a plataforma para começar a usar o Telegram:</p>
-
-        <!-- Botões de download para Android e iOS -->
-        <div class="button-container">
-            <a href="https://play.google.com/store/apps/details?id=org.telegram.messenger" class="button button-android" target="_blank">
-                <img src="https://icons.getbootstrap.com/assets/icons/android.svg" alt="Android Icon" class="icon"> 
-                <span>Android</span>
-            </a>
-            <a href="https://apps.apple.com/br/app/telegram-messenger/id686449807" class="button button-ios" target="_blank">
-                <img src="https://icons.getbootstrap.com/assets/icons/apple.svg" alt="Apple Icon" class="icon"> 
-                <span>iOS</span>
-            </a>
+<body class="min-h-screen flex flex-col">
+    <header class="header-bg py-8 mb-8">
+        <div class="container mx-auto px-4">
+            <img src="https://icons.getbootstrap.com/assets/icons/telegram.svg" alt="Telegram Logo" class="w-20 h-20 mx-auto bg-white p-3 rounded-full shadow-lg">
         </div>
+    </header>
 
-        <!-- Título da seção de instruções -->
-        <p class="section-title">Como começar</p>
+    <main class="flex-grow container mx-auto px-4 mb-8">
+        <h1 class="text-3xl font-bold text-center text-gray-800 mb-8">Bem-vindo, Novo Motorista!</h1>
+        <p class="text-center text-gray-600 mb-12">Siga os passos abaixo para começar sua jornada conosco.</p>
 
-        <!-- Passos simplificados com foco no público geral -->
-        <div class="step-container">
-            <div class="step">
-                <div class="step-title">Passo 1: Instalar</div>
-                <div class="step-description">Baixe e instale o Telegram na sua plataforma (Android ou iOS).</div>
+        <div class="max-w-2xl mx-auto space-y-6">
+            <!-- Passo 1: Baixar o Telegram -->
+            <div class="step-card bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">1. Baixar o Telegram</h2>
+                <p class="text-gray-600 mb-6">Escolha sua plataforma e baixe o aplicativo Telegram:</p>
+                <div class="grid grid-cols-2 gap-4">
+                    <a href="https://play.google.com/store/apps/details?id=org.telegram.messenger" class="btn-primary text-white font-medium py-3 px-4 rounded-lg text-center" target="_blank">
+                        Android
+                    </a>
+                    <a href="https://apps.apple.com/br/app/telegram-messenger/id686449807" class="btn-secondary font-medium py-3 px-4 rounded-lg text-center" target="_blank">
+                        iOS
+                    </a>
+                </div>
             </div>
-            <div class="step">
-                <div class="step-title">Passo 2: Abrir</div>
-                <div class="step-description">Abra o aplicativo instalado no seu dispositivo.</div>
+
+            <!-- Passo 2: Iniciar o Bot -->
+            <div class="step-card bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">2. Iniciar o Bot</h2>
+                <p class="text-gray-600 mb-6">Clique abaixo para iniciar uma conversa com nosso bot:</p>
+                <a href="https://t.me/@canalrotasbot" class="btn-primary text-white font-medium py-3 px-4 rounded-lg block text-center" target="_blank">
+                    Iniciar Bot
+                </a>
             </div>
-            <div class="step">
-                <div class="step-title">Passo 3: Cadastrar e Definir Nome de Usuário</div>
-                <div class="step-description">Siga as instruções para criar um nome de usuário e veja o vídeo explicativo.</div>
+
+            <!-- Passo 3: Contatar Suporte -->
+            <div class="step-card bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">3. Contatar Suporte</h2>
+                <p class="text-gray-600 mb-6">Se precisar de ajuda adicional, contate nosso suporte:</p>
+                <a href="https://t.me/oppmotorista" class="btn-primary text-white font-medium py-3 px-4 rounded-lg block text-center" target="_blank">
+                    Contatar Suporte
+                </a>
             </div>
         </div>
+    </main>
 
-        <!-- Botão para assistir ao vídeo -->
-        <a href="#video" class="button button-video" id="watch-video-btn">Assistir ao vídeo</a>
-
-        <!-- Vídeo explicativo -->
-        <div class="video-container" id="video-container">
-            <video controls id="video">
-                <source src="assets/video/IMG_5048.MP4" type="video/mp4">
-                Seu navegador não suporta o elemento de vídeo.
-            </video>
-        </div>
-    </div>
-    
-    <!-- Rodapé discreto -->
-    <footer>
+    <footer class="mt-auto py-4 text-center text-gray-500 text-sm">
         <p>@euoryan</p>
     </footer>
-
-    <script>
-        document.getElementById("watch-video-btn").addEventListener("click", function(e) {
-            e.preventDefault();
-            const videoContainer = document.getElementById("video-container");
-            videoContainer.style.display = 'block'; // Mostrar o vídeo
-            document.getElementById("video").scrollIntoView({ behavior: 'smooth' }); // Scroll suave até o vídeo
-        });
-    </script>
-
 </body>
 </html>
