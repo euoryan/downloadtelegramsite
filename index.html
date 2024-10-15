@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guia Novos Motoristas</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
         
@@ -57,10 +58,37 @@
 
         .tips-content {
             display: none;
-            padding: 10px;
+            padding: 15px;
             background-color: #f8f9fa;
-            border-radius: 5px;
-            margin-top: 10px;
+            border-radius: 8px;
+            margin-top: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .tips-toggle {
+            display: inline-flex;
+            align-items: center;
+            cursor: pointer;
+            padding: 5px 10px;
+            border-radius: 15px;
+            background-color: #e1e4e8;
+            transition: background-color 0.3s;
+        }
+
+        .tips-toggle:hover {
+            background-color: #d1d5db;
+        }
+
+        .tip-item {
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #e1e4e8;
+        }
+
+        .tip-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
         }
 
         @media (max-width: 640px) {
@@ -101,13 +129,23 @@
                                 iOS
                             </a>
                         </div>
-                        <p class="text-sm text-gray-500 mt-4 cursor-pointer tips-toggle" data-target="tips-1">Dicas ▼</p>
+                        <p class="text-sm text-gray-500 mt-4 tips-toggle" data-target="tips-1">
+                            <span>Dicas</span>
+                            <i class="fas fa-chevron-down ml-2"></i>
+                        </p>
                         <div id="tips-1" class="tips-content">
-                            <ul class="list-disc pl-5 text-sm text-gray-600">
-                                <li>Certifique-se de ter uma conexão de internet estável para baixar o aplicativo.</li>
-                                <li>O Telegram é gratuito e não consome muita memória do seu dispositivo.</li>
-                                <li>Se você já tem o Telegram instalado, verifique se está atualizado para a versão mais recente.</li>
-                            </ul>
+                            <div class="tip-item">
+                                <p class="font-semibold">Conexão Estável:</p>
+                                <p>Certifique-se de ter uma conexão de internet estável para baixar o aplicativo.</p>
+                            </div>
+                            <div class="tip-item">
+                                <p class="font-semibold">Aplicativo Leve:</p>
+                                <p>O Telegram é gratuito e não consome muita memória do seu dispositivo.</p>
+                            </div>
+                            <div class="tip-item">
+                                <p class="font-semibold">Manter Atualizado:</p>
+                                <p>Se você já tem o Telegram instalado, verifique se está atualizado para a versão mais recente.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -123,16 +161,31 @@
                         <a href="https://t.me/canalrotasbot" class="btn-primary text-white font-medium py-2 px-3 rounded-lg block text-center text-sm sm:text-base" target="_blank">
                             Conversar com o Bot
                         </a>
-                        <p class="text-sm text-gray-500 mt-4 cursor-pointer tips-toggle" data-target="tips-2">Dicas ▼</p>
+                        <p class="text-sm text-gray-500 mt-4 tips-toggle" data-target="tips-2">
+                            <span>Dicas</span>
+                            <i class="fas fa-chevron-down ml-2"></i>
+                        </p>
                         <div id="tips-2" class="tips-content">
-                            <ul class="list-disc pl-5 text-sm text-gray-600">
-                                <li>Ao iniciar o bot, você receberá uma mensagem de boas-vindas com seu ID de usuário. Guarde esse ID, pois ele é seu meio de comunicação e identificação.</li>
-                                <li>Nosso bot é seguro e só acessa as informações pessoais que você compartilhar.</li>
-                                <li>Se tiver problemas ao iniciar o bot, tente fechar e reabrir o Telegram.</li>
-                                <li>Não envie mensagens aleatórias para o bot. Ele não possui interação direta com a nossa equipe e serve apenas para o envio automatizado de suas rotas planejadas. Não é necessário enviar mensagens por lá.</li>
-                                <li>Todas as mensagens do bot terão um botão de suporte. Ao clicar nele, você será direcionado ao suporte operacional para encaminhar sua dúvida.</li>
-
-                            </ul>
+                            <div class="tip-item">
+                                <p class="font-semibold">ID de Usuário:</p>
+                                <p>Ao iniciar o bot, você receberá uma mensagem de boas-vindas com seu ID de usuário. Guarde esse ID, pois ele é seu meio de comunicação e identificação.</p>
+                            </div>
+                            <div class="tip-item">
+                                <p class="font-semibold">Segurança:</p>
+                                <p>Nosso bot é seguro e só acessa as informações pessoais que você compartilhar.</p>
+                            </div>
+                            <div class="tip-item">
+                                <p class="font-semibold">Resolução de Problemas:</p>
+                                <p>Se tiver problemas ao iniciar o bot, tente fechar e reabrir o Telegram.</p>
+                            </div>
+                            <div class="tip-item">
+                                <p class="font-semibold">Comunicação com o Bot:</p>
+                                <p>Não envie mensagens aleatórias para o bot. Ele não possui interação direta com a nossa equipe e serve apenas para o envio automatizado de suas rotas planejadas.</p>
+                            </div>
+                            <div class="tip-item">
+                                <p class="font-semibold">Suporte:</p>
+                                <p>Todas as mensagens do bot terão um botão de suporte. Ao clicar nele, você será direcionado ao suporte operacional para encaminhar sua dúvida.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -148,13 +201,23 @@
                         <a href="https://t.me/oppmotorista" class="btn-primary text-white font-medium py-2 px-3 rounded-lg block text-center text-sm sm:text-base" target="_blank">
                             Conversar com Operacional
                         </a>
-                        <p class="text-sm text-gray-500 mt-4 cursor-pointer tips-toggle" data-target="tips-3">Dicas ▼</p>
+                        <p class="text-sm text-gray-500 mt-4 tips-toggle" data-target="tips-3">
+                            <span>Dicas</span>
+                            <i class="fas fa-chevron-down ml-2"></i>
+                        </p>
                         <div id="tips-3" class="tips-content">
-                            <ul class="list-disc pl-5 text-sm text-gray-600">
-                                <li>Ao enviar seu nome de guerra, use o formato: "Nome de Guerra: [Seu Nome]".</li>
-                                <li>Mantenha as conversas profissionais e respeitosas com o suporte operacional.</li>
-                                <li>Guarde o contato do suporte para futuras comunicações importantes.</li>
-                            </ul>
+                            <div class="tip-item">
+                                <p class="font-semibold">Nome de Guerra:</p>
+                                <p>Seu nome de guerra será definido pelo setor responsável pela apresentação do Telegram.</p>
+                            </div>
+                            <div class="tip-item">
+                                <p class="font-semibold">Comunicação Profissional:</p>
+                                <p>Mantenha sempre uma comunicação profissional e respeitosa com o suporte operacional.</p>
+                            </div>
+                            <div class="tip-item">
+                                <p class="font-semibold">Importância do Suporte:</p>
+                                <p>O contato com o suporte operacional é fundamental. Ele será seu canal de comunicação para tratar sobre rotas, informações detalhadas, resolução de problemas e outras necessidades.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -173,12 +236,15 @@
                 toggle.addEventListener('click', function() {
                     const targetId = this.getAttribute('data-target');
                     const targetContent = document.getElementById(targetId);
+                    const icon = this.querySelector('i');
                     if (targetContent.style.display === 'none' || targetContent.style.display === '') {
                         targetContent.style.display = 'block';
-                        this.textContent = 'Dicas ▲';
+                        icon.classList.remove('fa-chevron-down');
+                        icon.classList.add('fa-chevron-up');
                     } else {
                         targetContent.style.display = 'none';
-                        this.textContent = 'Dicas ▼';
+                        icon.classList.remove('fa-chevron-up');
+                        icon.classList.add('fa-chevron-down');
                     }
                 });
             });
