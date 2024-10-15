@@ -6,6 +6,7 @@
     <title>Guia Novos Motoristas</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://telegram.org/img/favicon.ico">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
         
@@ -104,8 +105,8 @@
 </head>
 <body class="min-h-screen flex flex-col">
     <header class="header-bg py-8 mb-8">
-        <div class="container mx-auto px-4">
-            <img src="/api/placeholder/64/64" alt="Telegram Logo" class="w-16 h-16 mx-auto bg-white p-2 rounded-full shadow-lg">
+        <div class="container mx-auto px-4 flex flex-col items-center">
+            <img src="https://icons.getbootstrap.com/assets/icons/telegram.svg" alt="Telegram Logo" class="w-16 h-16 mx-auto bg-white p-2 rounded-full shadow-lg mb-4">
         </div>
     </header>
 
@@ -230,23 +231,13 @@
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const toggles = document.querySelectorAll('.tips-toggle');
-            toggles.forEach(toggle => {
-                toggle.addEventListener('click', function() {
-                    const targetId = this.getAttribute('data-target');
-                    const targetContent = document.getElementById(targetId);
-                    const icon = this.querySelector('i');
-                    if (targetContent.style.display === 'none' || targetContent.style.display === '') {
-                        targetContent.style.display = 'block';
-                        icon.classList.remove('fa-chevron-down');
-                        icon.classList.add('fa-chevron-up');
-                    } else {
-                        targetContent.style.display = 'none';
-                        icon.classList.remove('fa-chevron-up');
-                        icon.classList.add('fa-chevron-down');
-                    }
-                });
+        document.querySelectorAll('.tips-toggle').forEach(function(toggle) {
+            toggle.addEventListener('click', function() {
+                const targetId = toggle.getAttribute('data-target');
+                const content = document.getElementById(targetId);
+                content.style.display = content.style.display === 'none' || content.style.display === '' ? 'block' : 'none';
+                toggle.querySelector('i').classList.toggle('fa-chevron-down');
+                toggle.querySelector('i').classList.toggle('fa-chevron-up');
             });
         });
     </script>
