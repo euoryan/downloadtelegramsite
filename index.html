@@ -19,8 +19,8 @@
         }
         
         .step-number {
-            width: 40px;
-            height: 40px;
+            width: 32px;
+            height: 32px;
             background-color: #0088cc;
             color: white;
             border-radius: 50%;
@@ -28,16 +28,17 @@
             justify-content: center;
             align-items: center;
             font-weight: bold;
-            font-size: 1.2rem;
+            font-size: 1rem;
+            flex-shrink: 0;
         }
         
         .step-connector {
             width: 2px;
             background-color: #0088cc;
             position: absolute;
-            top: 60px;
+            top: 48px;
             bottom: 0;
-            left: 19px;
+            left: 15px;
             z-index: -1;
         }
         
@@ -53,33 +54,42 @@
             background-color: #e1e4e8;
             color: #0088cc;
         }
+
+        @media (max-width: 640px) {
+            .step-card {
+                border-left: none;
+                border-top: 4px solid #0088cc;
+            }
+            .step-connector {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body class="min-h-screen flex flex-col">
     <header class="header-bg py-8 mb-8">
         <div class="container mx-auto px-4">
-            <img src="https://icons.getbootstrap.com/assets/icons/telegram.svg" alt="Telegram Logo" class="w-20 h-20 mx-auto bg-white p-3 rounded-full shadow-lg">
+            <img src="https://icons.getbootstrap.com/assets/icons/telegram.svg" alt="Telegram Logo" class="w-16 h-16 mx-auto bg-white p-2 rounded-full shadow-lg">
         </div>
     </header>
 
     <main class="flex-grow container mx-auto px-4 py-8">
-        <h1 class="text-3xl font-bold text-center text-gray-800 mb-8">Bem-vindo, Novo Motorista!</h1>
-        <p class="text-center text-xl text-gray-600 mb-12">Siga estes 3 passos simples para começar sua jornada conosco:</p>
+        <h1 class="text-2xl sm:text-3xl font-bold text-center text-gray-800 mb-6">Bem-vindo, Novo Motorista!</h1>
+        <p class="text-center text-lg sm:text-xl text-gray-600 mb-10">Siga estes 3 passos simples para começar sua jornada conosco:</p>
 
-        <div class="max-w-3xl mx-auto space-y-8">
+        <div class="max-w-3xl mx-auto space-y-6">
             <!-- Passo 1: Baixar o Telegram -->
-            <div class="step-card bg-white rounded-lg shadow-md p-6 relative">
-                <div class="flex items-start space-x-6">
+            <div class="step-card bg-white rounded-lg shadow-md p-4 sm:p-6 relative">
+                <div class="flex items-start space-x-4">
                     <div class="step-number">1</div>
-                    <div class="step-connector"></div>
                     <div class="flex-grow">
-                        <h2 class="text-2xl font-semibold text-gray-800 mb-4">Baixar o Telegram</h2>
-                        <p class="text-gray-600 mb-6">Escolha sua plataforma e baixe o aplicativo Telegram:</p>
-                        <div class="grid grid-cols-2 gap-4">
-                            <a href="https://play.google.com/store/apps/details?id=org.telegram.messenger" class="btn-primary text-white font-medium py-3 px-4 rounded-lg text-center" target="_blank">
+                        <h2 class="text-xl sm:text-2xl font-semibold text-gray-800 mb-3">Baixar o Telegram</h2>
+                        <p class="text-gray-600 mb-4">Escolha sua plataforma e baixe o aplicativo Telegram:</p>
+                        <div class="grid grid-cols-2 gap-3">
+                            <a href="https://play.google.com/store/apps/details?id=org.telegram.messenger" class="btn-primary text-white font-medium py-2 px-3 rounded-lg text-center text-sm sm:text-base" target="_blank">
                                 Android
                             </a>
-                            <a href="https://apps.apple.com/br/app/telegram-messenger/id686449807" class="btn-secondary font-medium py-3 px-4 rounded-lg text-center" target="_blank">
+                            <a href="https://apps.apple.com/br/app/telegram-messenger/id686449807" class="btn-secondary font-medium py-2 px-3 rounded-lg text-center text-sm sm:text-base" target="_blank">
                                 iOS
                             </a>
                         </div>
@@ -88,14 +98,13 @@
             </div>
 
             <!-- Passo 2: Iniciar o Bot -->
-            <div class="step-card bg-white rounded-lg shadow-md p-6 relative">
-                <div class="flex items-start space-x-6">
+            <div class="step-card bg-white rounded-lg shadow-md p-4 sm:p-6 relative">
+                <div class="flex items-start space-x-4">
                     <div class="step-number">2</div>
-                    <div class="step-connector"></div>
                     <div class="flex-grow">
-                        <h2 class="text-2xl font-semibold text-gray-800 mb-4">Iniciar o Bot</h2>
-                        <p class="text-gray-600 mb-6">Clique abaixo para iniciar uma conversa com nosso bot:</p>
-                        <a href="https://t.me/@canalrotasbot" class="btn-primary text-white font-medium py-3 px-4 rounded-lg block text-center" target="_blank">
+                        <h2 class="text-xl sm:text-2xl font-semibold text-gray-800 mb-3">Iniciar o Bot</h2>
+                        <p class="text-gray-600 mb-4">Clique abaixo para iniciar uma conversa com nosso bot:</p>
+                        <a href="https://t.me/@canalrotasbot" class="btn-primary text-white font-medium py-2 px-3 rounded-lg block text-center text-sm sm:text-base" target="_blank">
                             Iniciar Bot
                         </a>
                     </div>
@@ -103,13 +112,13 @@
             </div>
 
             <!-- Passo 3: Contatar Suporte -->
-            <div class="step-card bg-white rounded-lg shadow-md p-6 relative">
-                <div class="flex items-start space-x-6">
+            <div class="step-card bg-white rounded-lg shadow-md p-4 sm:p-6 relative">
+                <div class="flex items-start space-x-4">
                     <div class="step-number">3</div>
                     <div class="flex-grow">
-                        <h2 class="text-2xl font-semibold text-gray-800 mb-4">Contatar Suporte</h2>
-                        <p class="text-gray-600 mb-6">Se precisar de ajuda adicional, contate nosso suporte:</p>
-                        <a href="https://t.me/oppmotorista" class="btn-primary text-white font-medium py-3 px-4 rounded-lg block text-center" target="_blank">
+                        <h2 class="text-xl sm:text-2xl font-semibold text-gray-800 mb-3">Contatar Suporte</h2>
+                        <p class="text-gray-600 mb-4">Se precisar de ajuda adicional, contate nosso suporte:</p>
+                        <a href="https://t.me/oppmotorista" class="btn-primary text-white font-medium py-2 px-3 rounded-lg block text-center text-sm sm:text-base" target="_blank">
                             Contatar Suporte
                         </a>
                     </div>
@@ -118,7 +127,7 @@
         </div>
     </main>
 
-    <footer class="mt-12 py-4 text-center text-gray-500 text-sm">
+    <footer class="mt-10 py-4 text-center text-gray-500 text-sm">
         <p>@euoryan</p>
     </footer>
 </body>
